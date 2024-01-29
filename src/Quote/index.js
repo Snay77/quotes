@@ -1,3 +1,5 @@
+import getQuotes from "../Data/data";
+
 function Quote(props) {
     return (
         <>
