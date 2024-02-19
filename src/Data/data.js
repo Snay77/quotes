@@ -21,4 +21,11 @@ function getQuotes(){
     return quotes
 }
 
-export default getQuotes;
+export {getQuotes};
+
+export function getNextQuote(x) {
+    let filtre = getQuotes().filter(v=>x<v.id)
+    let tri = filtre.sort((a, b) => a.id - b.id)
+    let fin = tri.at(0)
+    return fin
+}
